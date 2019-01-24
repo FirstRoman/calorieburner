@@ -29,6 +29,8 @@
         <span class="modal-content__counter-num js-modal-content__counter-num"
           >000</span
         >
+      </p>
+      <p class="modal-content__counter2">
         <span class="modal-content__counter-text">/ккал</span>
       </p>
     </div>
@@ -63,7 +65,7 @@
   // 4. The API will call this function when the video player is ready.
   function onPlayerReady(event) {
     event.target.setPlaybackQuality("default");
-    
+
     console.log(event.target);
   }
 
@@ -72,7 +74,6 @@
   //    the player should play for six seconds and then stop.
 
   function onPlayerStateChange(event) {
-
     let duration = Math.round(event.target.getDuration());
     let currentTime = Math.round(event.target.getCurrentTime());
     let iframe = document.getElementById("player");
